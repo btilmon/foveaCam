@@ -13,3 +13,15 @@ This is a reference implementation of the control algorithm implemented in our p
   doi={10.1109/ICCP48838.2020.9105183}}
 ```
 
+
+<p align="center">
+  <img src="gif.gif" alt="simulation" />
+</p>
+
+# Install
+1. install numpy
+2. install matplotlib
+3. git clone <link>
+4. python main.py
+
+The simulation should then begin.

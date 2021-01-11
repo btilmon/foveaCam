@@ -1,5 +1,5 @@
 # [ICCP 2020] FoveaCam: A MEMS Mirror-Enabled Foveating Camera
-<<<<<<< HEAD
+
 This is a python implementation of the control algorithm implemented in our paper "FoveaCam: A MEMS Mirror-Enabled Foveating Camera", which was published in the 2020 International Conference on Computational Photography. The code simulates a MEMS mirror tracking two targets with the closed-loop differential control algorithm from our paper. 
 
 Given a pair of probability distributions, which could be the output of a computer vision detection from a colocated sensor or from our foveating camera, our algorithm differentiably updates the motion of the MEMS scanning path to quickly track between targets. We plan on extending the tracking to more than two distributions in the future. 

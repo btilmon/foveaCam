@@ -2,6 +2,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 import derivatives 
 import sys
+plt.rcParams["font.family"] = "Times New Roman"    
+plt.rcParams.update({'font.size': 15})
 
 edgeeffect = 0.1;
 ##########
@@ -310,9 +312,11 @@ while True:
             
 
     plt.plot([xrp,xop],[yrp,yop],'tab:red', marker='d', label='Predicted', linewidth=2)
-    plt.legend()
+    plt.legend(fontsize=10)
+    plt.axis('off')
     plt.title('MEMS Tracking Simulation')
     plt.pause(0.0000000001)
     plt.clf()
 plt.show()
+
 

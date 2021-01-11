@@ -12,7 +12,7 @@ I = np.zeros((1000, 1000, 1)) #imread('leftstart.png')
 sims = 0
 while True:
     step = np.random.randint(1,600,1)
-    bbox = np.array([step, step+50, 100, 200]) 
+    bbox = np.array([step, step+50, 150, 250]) 
 
     M, N, P = I.shape
 
@@ -47,7 +47,7 @@ while True:
 
     # right image
     step = np.random.randint(1,600,1)
-    bbox = np.array([step, step+50, 100, 200]) 
+    bbox = np.array([step, step+50, 150, 250]) 
 
     xlfimo = bbox[0] + 0.5*bbox[2]
     ylfimo = bbox[1] + bbox[3]
@@ -68,7 +68,7 @@ while True:
 
     # final right image
     step = np.random.randint(1,600,1)
-    bbox = np.array([step, step+50, 100, 200]) 
+    bbox = np.array([step, step+50, 150, 250]) 
 
     xlfimo = bbox[0] + 0.5*bbox[2]
     ylfimo = bbox[1] + bbox[3]

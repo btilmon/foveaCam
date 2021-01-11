@@ -10,7 +10,7 @@ edgeeffect = 0.1
 I = np.zeros((1000, 1000, 1)) #imread('leftstart.png') 
 
 sims = 0
-while sims < 100:
+while True:
     step = np.random.randint(1,700,1)
     bbox = np.array([step, step+50, 200, 300]) 
 
@@ -154,7 +154,7 @@ while sims < 100:
     alpha = np.arctan((y2t - y1t)/(x2t - x1t))
     L = np.sqrt((x[:,1] - x[:,0])**2 + (y[:,1] - y[:,0])**2)
 
-    plt.imshow(fd,cmap='Wistia')
+    plt.imshow(fd,cmap='gray')
      
     xo = xlf 
     yo = ylf 
@@ -167,7 +167,7 @@ while sims < 100:
     yop = yo*mxY + mY
     yop = 100 - yop
 
-    plt.plot([xrp,xop],[yrp,yop],'k-o', label='True')
+    plt.plot([xrp,xop],[yrp,yop],'tab:green',marker='o', label='True')
 
     # used for visualization
     L_tmp = np.sqrt(((xrf) - (xlf))**2 + ((yrf) - (ylf))**2)

@@ -26,9 +26,8 @@ If you find our code useful, please cite:
 
 
 # Install
-1. install numpy
-2. install matplotlib
-3. git clone <link>
+1. install numpy, scipy, matplotlib
+3. git clone this repo
 4. python main.py
 
 The simulation should then begin.

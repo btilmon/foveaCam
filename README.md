@@ -1,10 +1,12 @@
 # [ICCP 2020] FoveaCam: A MEMS Mirror-Enabled Foveating Camera
-This is a reference implementation of the control algorithm implemented in our paper "FoveaCam: A MEMS Mirror-Enabled Foveating Camera", which was published in the 2020 International Conference on Computational Photography. The code shows a simulation of a MEMS mirror tracking targets based on our control derivatives from the paper. If you find our code useful, please cite:
+This is a reference implementation of the control algorithm implemented in our paper "FoveaCam: A MEMS Mirror-Enabled Foveating Camera", which was published in the 2020 International Conference on Computational Photography. The code shows a simulation of a MEMS mirror tracking targets based on our control derivatives from the paper. 
+[Project Page](http://focus.ece.ufl.edu/foveating-cameras/) | [Paper](https://btilmon.github.io/pubs/foveaCam_iccp20.pdf)
 
 <p align="center">
   <img src="fovCam.jpg" alt="hardware" />
 </p>
 
+If you find our code useful, please cite:
 ```
 @INPROCEEDINGS{9105183,
   author={B. {Tilmon} and E. {Jain} and S. {Ferrari} and S. {Koppal}},

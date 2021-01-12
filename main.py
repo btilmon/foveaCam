@@ -151,7 +151,7 @@ while True:
     xr = x[:,0]
     yr = y[:,0]
 
-    alpha = np.arctan((y2t - y1t)/(x2t - x1t))
+    alpha = np.arctan((ylf - yrf)/(xlf - xrf))#np.arctan((y2t - y1t)/(x2t - x1t))
     L = np.sqrt((x[:,1] - x[:,0])**2 + (y[:,1] - y[:,0])**2)
 
     plt.imshow(fd,cmap='gray')
@@ -181,7 +181,7 @@ while True:
 
     #optimization params    
     smallval = .1
-    lr = 0.03
+    lr = .01
     oldnorm = np.linalg.norm(derivs) + 0.01
     newnorm = oldnorm + 5
 
@@ -209,9 +209,8 @@ while True:
         alpha = q_r[2][0]
 
         # new Pi location
-        L = L_tmp#np.sqrt((xr - oldqr[1][0])**2 + (yr - oldqr[0][0])**2)
-        xo = xr + L*np.cos(alpha)
-        yo = yr + L*np.sin(alpha)
+        xo = xr + L_tmp*np.cos(alpha)
+        yo = yr + L_tmp*np.sin(alpha)
 
         xrp = xr*mxX + mX
         yrp = yr*mxY + mY
@@ -227,9 +226,11 @@ while True:
         newnorm = np.linalg.norm(derivs)
 
     plt.plot([xrp,xop],[yrp,yop],'tab:red', marker='d', label='Predicted', linewidth=2)
+    q_r = np.round(q_r, 3)
+
     plt.legend(fontsize=10)
     plt.axis('off')
-    plt.title('MEMS Tracking Simulation')
+    plt.title('MEMS Tracking Simulation')#+'[x, y, alpha]: ['+str(q_r[0][0])+', '+str(q_r[0][0])+', '+str(q_r[0][0])+']')
     plt.pause(0.0000000001)
     plt.clf()
     sims += 1
